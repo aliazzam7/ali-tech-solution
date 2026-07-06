@@ -1,0 +1,117 @@
+.service-card{
+  position:relative;
+  padding:34px 28px;
+  border:1px solid var(--border);
+  border-radius:18px;
+  overflow:hidden;
+  transition:transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+  display:flex;
+  flex-direction:column;
+  height:100%;
+  --tcolor:var(--primary);
+  --tcolor-dim:rgba(0,194,255,0.35);
+  --tcolor-bg:rgba(0,194,255,0.16);
+}
+
+/* تناوب الألوان الثلاثة، نفس منطق testimonials/stats */
+.service-card:nth-child(3n+1){
+  --tcolor:var(--primary);
+  --tcolor-dim:rgba(0,194,255,0.35);
+  --tcolor-bg:rgba(0,194,255,0.16);
+}
+.service-card:nth-child(3n+2){
+  --tcolor:var(--secondary);
+  --tcolor-dim:rgba(138,46,255,0.35);
+  --tcolor-bg:rgba(138,46,255,0.16);
+}
+.service-card:nth-child(3n){
+  --tcolor:var(--accent);
+  --tcolor-dim:rgba(255,45,117,0.35);
+  --tcolor-bg:rgba(255,45,117,0.16);
+}
+
+/* بار ملوّن رفيع فوق، متل testimonial-card-topbar */
+.service-card::before{
+  content:"";
+  position:absolute;
+  top:0; left:0; right:0;
+  height:3px;
+  background:linear-gradient(90deg, var(--tcolor), transparent 85%);
+  z-index:0;
+}
+
+.service-card > *{ position:relative; z-index:1; }
+
+.service-card:hover{
+  transform:translateY(-6px);
+  border-color:var(--tcolor-dim);
+  box-shadow:0 16px 32px -18px var(--tcolor-dim);
+}
+
+.service-card-icon{
+  width:52px; height:52px;
+  border-radius:14px;
+  display:flex; align-items:center; justify-content:center;
+  background:linear-gradient(135deg, var(--tcolor-bg), rgba(255,255,255,0.03));
+  color:var(--tcolor);
+  margin-bottom:18px;
+  transition:transform .3s ease;
+}
+.service-card:hover .service-card-icon{
+  transform:scale(1.08);
+}
+
+.service-card h3{
+  font-size:20.5px;
+  font-weight:600;
+  letter-spacing:-0.01em;
+  margin-bottom:10px;
+}
+.service-card p{
+  font-size:14.5px;
+  line-height:1.6;
+  color:var(--text-dim);
+  margin-bottom:18px;
+}
+.service-card-items{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  margin-bottom:22px;
+  flex:1;
+}
+.service-card-items li{
+  font-size:15px;
+  font-weight:500;
+  line-height:1.5;
+  color:var(--text);
+  padding-left:18px;
+  position:relative;
+}
+.service-card-items li::before{
+  content:"";
+  position:absolute; left:0; top:9px;
+  width:8px; height:2px;
+  border-radius:2px;
+  background:var(--tcolor);
+}
+.service-card-link{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-size:14px;
+  font-weight:600;
+  color:var(--tcolor);
+  margin-top:auto;
+  transition:gap .25s ease;
+}
+.service-card-link:hover{
+  gap:9px;
+}
+
+.service-card.is-compact{
+  padding:26px 24px;
+}
+.service-card.is-compact p{
+  margin-bottom:12px;
+}

@@ -1,0 +1,19 @@
+.skill-card{
+  padding:16px 18px;
+  border:1px solid var(--border);
+  border-radius:12px;
+  background:var(--surface);
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  transition:border-color .2s ease, transform .2s ease;
+}
+.skill-card:hover{border-color:var(--primary); transform:translateY(-3px);}
+.skill-card-name{font-weight:600; font-size:14.5px;}
+.skill-card-category{
+  font-family:var(--font-mono);
+  font-size:10.5px;
+  text-transform:uppercase;
+  letter-spacing:0.08em;
+  color:var(--text-faint);
+}

@@ -1,0 +1,101 @@
+.testimonial-card{
+  position:relative;
+  padding:30px 28px 28px;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+  height:100%;
+  overflow:hidden;
+  transition:transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+  --tcolor:var(--primary);
+  --tcolor-dim:rgba(0,194,255,0.35);
+}
+
+/* تناوب الألوان الثلاثة بين الكاردات تلقائياً */
+.testimonial-card:nth-child(3n+1){
+  --tcolor:var(--primary);
+  --tcolor-dim:rgba(0,194,255,0.35);
+}
+.testimonial-card:nth-child(3n+2){
+  --tcolor:var(--secondary);
+  --tcolor-dim:rgba(138,46,255,0.35);
+}
+.testimonial-card:nth-child(3n){
+  --tcolor:var(--accent);
+  --tcolor-dim:rgba(255,45,117,0.35);
+}
+
+.testimonial-card:hover{
+  transform:translateY(-6px);
+  border-color:var(--tcolor-dim);
+  box-shadow:0 16px 32px -18px var(--tcolor-dim);
+}
+
+/* بار ملوّن رفيع فوق الكارد */
+.testimonial-card-topbar{
+  position:absolute;
+  top:0; left:0; right:0;
+  height:3px;
+  background:linear-gradient(90deg, var(--tcolor), transparent 85%);
+}
+
+/* أيقونة الاقتباس الكبيرة الشفافة بالخلفية */
+.testimonial-card-icon{
+  position:absolute;
+  top:18px;
+  right:20px;
+  color:var(--tcolor);
+  opacity:0.14;
+  transform:rotate(8deg);
+  transition:transform .3s ease, opacity .3s ease;
+}
+.testimonial-card:hover .testimonial-card-icon{
+  opacity:0.22;
+  transform:rotate(0deg) scale(1.05);
+}
+
+.testimonial-card-quote{
+  position:relative;
+  z-index:1;
+  font-size:15px;
+  color:var(--text);
+  line-height:1.7;
+  flex:1;
+  margin-top:6px;
+}
+
+.testimonial-card-author{
+  position:relative;
+  z-index:1;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding-top:16px;
+  border-top:1px solid var(--border);
+}
+
+.testimonial-card-avatar{
+  flex-shrink:0;
+  width:42px; height:42px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:var(--font-display);
+  font-weight:700;
+  font-size:14px;
+  color:#04070D;
+  background:linear-gradient(135deg, var(--tcolor), var(--secondary));
+  transition:transform .3s ease;
+}
+.testimonial-card:hover .testimonial-card-avatar{
+  transform:scale(1.08);
+}
+
+.testimonial-card-author-info{
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+}
+.testimonial-card-name{font-weight:600; font-size:14px;}
+.testimonial-card-role{font-size:12.5px; color:var(--text-faint);}

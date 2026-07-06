@@ -1,0 +1,101 @@
+.page-hero .eyebrow{
+  display:inline-block;
+}
+
+.hero-trust-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px 22px;
+  list-style:none;
+  margin:22px 0 0;
+  padding:0;
+}
+.hero-trust-row li{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size:13.5px;
+  color:var(--text-dim);
+}
+.hero-trust-row svg{color:var(--primary); flex-shrink:0;}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 300px;
+  gap:36px;
+  padding-bottom:100px;
+  align-items:start;
+}
+
+.contact-side{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  position:sticky;
+  top:110px;
+}
+.contact-side-card{
+  padding:18px;
+  display:flex;
+  align-items:flex-start;
+  gap:14px;
+  border-radius:var(--radius-md);
+}
+.contact-side-icon{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:36px;
+  height:36px;
+  flex-shrink:0;
+  border-radius:10px;
+  background:color-mix(in srgb, var(--primary) 14%, transparent);
+  color:var(--primary);
+}
+.contact-side-card h4{font-size:13.5px; margin-bottom:4px;}
+.contact-side-card a{
+  font-size:13.5px;
+  color:var(--text-dim);
+  word-break:break-word;
+  transition:color .2s ease;
+}
+.contact-side-card a:hover, .contact-side-card a:focus-visible{color:var(--primary);}
+.contact-side-card p{font-size:13.5px; margin:0; color:var(--text-dim);}
+
+.contact-side-note{
+  font-size:12.5px;
+  line-height:1.6;
+  color:var(--text-faint);
+  padding:4px 6px;
+}
+
+/* Tablet */
+@media (max-width:1024px){
+  .contact-grid{grid-template-columns:1fr 260px; gap:24px;}
+}
+
+/* Below tablet: stack the form and the side rail */
+@media (max-width:900px){
+  .contact-grid{grid-template-columns:1fr;}
+  .contact-side{
+    position:static;
+    flex-direction:row;
+    flex-wrap:wrap;
+  }
+  .contact-side-card{flex:1 1 220px;}
+  .contact-side-note{flex-basis:100%;}
+}
+
+/* Mobile */
+@media (max-width:640px){
+  .hero-trust-row{gap:8px 16px;}
+  .contact-grid{gap:28px; padding-bottom:64px;}
+  .contact-side{flex-direction:column;}
+  .contact-side-card{flex:1 1 auto;}
+}
+
+/* Small phones */
+@media (max-width:400px){
+  .contact-side-card{padding:14px; gap:10px;}
+  .contact-side-icon{width:32px; height:32px;}
+}
