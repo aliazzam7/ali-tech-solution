@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { ChevronRight, MapPin } from "lucide-react";
 import experience from "../../data/experience";
 import skills from "../../data/skills";
-import SkillCard from "../../components/SkillCard/SkillCard";
 import siteConfig from "../../data/siteConfig";
 import { Link } from "react-router-dom";
 import profileImg from "../../assets/images/Me/profile.jpeg";
