@@ -49,21 +49,21 @@ import somoud5 from '../assets/images/soumoud/somoud5.jpeg';
 import somoud6 from '../assets/images/soumoud/somoud6.jpeg';
 
 
-import hms1 from '../assets/images/hms/hms1.jpeg';
-import hms2 from '../assets/images/hms/hms2.jpeg';
-import hms3 from '../assets/images/hms/hms3.jpeg';
-import hms4 from '../assets/images/hms/hms4.jpeg';
-import hms5 from '../assets/images/hms/hms5.jpeg';
-import hms6 from '../assets/images/hms/hms6.jpeg';
-import hms7 from '../assets/images/hms/hms7.jpeg';
-import hms8 from '../assets/images/hms/hms8.jpeg';
-import hms9 from '../assets/images/hms/hms9.jpeg';
-import hms10 from '../assets/images/hms/hms10.jpeg';
-import hms11 from '../assets/images/hms/hms11.jpeg';
-import hms12 from '../assets/images/hms/hms12.jpeg';
-import hms13 from '../assets/images/hms/hms13.jpeg';
-import hms14 from '../assets/images/hms/hms14.jpeg';
-import hms15 from '../assets/images/hms/hms15.jpeg';
+// import hms1 from '../assets/images/hms/hms1.jpeg';
+// import hms2 from '../assets/images/hms/hms2.jpeg';
+// import hms3 from '../assets/images/hms/hms3.jpeg';
+// import hms4 from '../assets/images/hms/hms4.jpeg';
+// import hms5 from '../assets/images/hms/hms5.jpeg';
+// import hms6 from '../assets/images/hms/hms6.jpeg';
+// import hms7 from '../assets/images/hms/hms7.jpeg';
+// import hms8 from '../assets/images/hms/hms8.jpeg';
+// import hms9 from '../assets/images/hms/hms9.jpeg';
+// import hms10 from '../assets/images/hms/hms10.jpeg';
+// import hms11 from '../assets/images/hms/hms11.jpeg';
+// import hms12 from '../assets/images/hms/hms12.jpeg';
+// import hms13 from '../assets/images/hms/hms13.jpeg';
+// import hms14 from '../assets/images/hms/hms14.jpeg';
+// import hms15 from '../assets/images/hms/hms15.jpeg';
 
 
 import forsa1 from '../assets/images/forsa/forsa1.jpeg';
@@ -143,31 +143,31 @@ const projects = [
     gallery: [forsa1,forsa2,forsa3,forsa4,forsa5,forsa6,forsa7,forsa8,forsa9,forsa10,forsa11],
 
   },
-  {
-    id: "hospital-management-system",
-    name: "Hospital Management System (HMS)",
-    category: "Web",
-    image: hms1,
-    technologies: ["React.js", "PHP (REST API)", "MySQL", "SMTP / PHPMailer"],
-    description:
-      "A secure, centralized platform that digitizes hospital operations — patients, appointments, medical records, billing, and reporting — for admins, doctors, and receptionists.",
-    problem:
-      "Manual paperwork across patient records, appointments, and billing was slowing down hospital staff and creating room for errors.",
-    solution:
-      "Built a role-based system where receptionists handle registration and scheduling, doctors manage consultations and medical histories, and admins oversee operations — with automated notifications and exportable PDF/Excel reports.",
-    features: [
-      "Role-based authentication (Admin, Doctor, Receptionist)",
-      "Patient registration and profile management",
-      "Appointment scheduling, editing, and cancellation",
-      "Electronic medical records with diagnosis & treatment plans",
-      "Billing, invoice generation, and payment tracking",
-      "Automated email notifications for appointments & invoices",
-      "Interactive dashboards with statistics and charts",
-      "PDF and Excel report generation",
-    ],
-    gallery: [hms1,hms2,hms3,hms4,hms5,hms6,hms7,hms8,hms9,hms10,hms11,hms12,hms13,hms14,hms15],
+  // {
+  //   id: "hospital-management-system",
+  //   name: "Hospital Management System (HMS)",
+  //   category: "Web",
+  //   image: hms1,
+  //   technologies: ["React.js", "PHP (REST API)", "MySQL", "SMTP / PHPMailer"],
+  //   description:
+  //     "A secure, centralized platform that digitizes hospital operations — patients, appointments, medical records, billing, and reporting — for admins, doctors, and receptionists.",
+  //   problem:
+  //     "Manual paperwork across patient records, appointments, and billing was slowing down hospital staff and creating room for errors.",
+  //   solution:
+  //     "Built a role-based system where receptionists handle registration and scheduling, doctors manage consultations and medical histories, and admins oversee operations — with automated notifications and exportable PDF/Excel reports.",
+  //   features: [
+  //     "Role-based authentication (Admin, Doctor, Receptionist)",
+  //     "Patient registration and profile management",
+  //     "Appointment scheduling, editing, and cancellation",
+  //     "Electronic medical records with diagnosis & treatment plans",
+  //     "Billing, invoice generation, and payment tracking",
+  //     "Automated email notifications for appointments & invoices",
+  //     "Interactive dashboards with statistics and charts",
+  //     "PDF and Excel report generation",
+  //   ],
+  //   gallery: [hms1,hms2,hms3,hms4,hms5,hms6,hms7,hms8,hms9,hms10,hms11,hms12,hms13,hms14,hms15],
 
-  },
+  // },
   {
     id: "heart-disease-prediction",
     name: "Heart Disease Prediction System",
