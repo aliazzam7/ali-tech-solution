@@ -3,7 +3,8 @@
 
 .hero{
   position:relative;
-  padding:calc(var(--nav-h) + 70px) 0 90px;
+  padding: 70px 0 90px;
+  /* padding:calc(var(--nav-h) + 70px) 0 90px; */
   overflow:hidden;
   background-image:none;
 }
@@ -42,8 +43,22 @@
   line-height:1.65;
   color:var(--text-dim);
   max-width:520px;
-  margin-bottom:34px;
+  margin-bottom:14px;
 }
+
+.hero-extra{
+  font-size:15px;
+  line-height:1.5;
+  font-weight:600;
+  max-width:520px;
+  width:fit-content;
+  margin-bottom:34px;   /* hayde el 34px yalli kenet 3al description */
+  background:linear-gradient(100deg, var(--primary), var(--secondary), var(--accent));
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
 .hero-actions{display:flex; gap:16px; flex-wrap:wrap;}
 
 .hero-visual{

@@ -115,3 +115,19 @@
 .service-card.is-compact p{
   margin-bottom:12px;
 }
+.service-card-media{
+  width:100%;
+  aspect-ratio:16 / 10;
+  border-radius:12px;
+  overflow:hidden;
+  margin-bottom:18px;
+  background:rgba(255,255,255,0.03);
+}
+.service-card-media img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform .4s ease;
+}
+.service-card:hover .service-card-media img{ transform:scale(1.05); }

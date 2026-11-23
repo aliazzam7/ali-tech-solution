@@ -1,10 +1,10 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import ScrollToTopRoute from "./components/ScrollToTop/ScrollToTopRoute";
 import ScrollToTopButton from "./components/ScrollToTop/ScrollToTopButton";
-import Preloader from "./components/Preloader/Preloader";
+// import Preloader from "./components/Preloader/Preloader";
 
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
@@ -21,12 +21,12 @@ import NotFound from "./pages/NotFound/NotFound";
 import useNavbarHeight from "./hooks/useNavbarHeight";
 
 export default function App() {
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
   useNavbarHeight();
 
   return (
     <>
-      {loading && <Preloader onFinish={() => setLoading(false)} />}
+      {/* {loading && <Preloader onFinish={() => setLoading(false)} />} */}
 
       <ScrollToTopRoute />
       <Navbar />

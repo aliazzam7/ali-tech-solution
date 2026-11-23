@@ -1,0 +1,462 @@
+
+.promo-carousel {
+  width: 100%;
+  margin-top: var(--nav-h);
+  padding: 28px 24px 34px;
+  background: var(--bg);
+}
+
+.promo-card {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  max-width: 1080px;
+  min-height: 390px;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 42px 70px;
+  border: 1px solid rgba(167, 176, 192, 0.2);
+  border-radius: 22px;
+  background: var(--bg-alt);
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.28);
+  animation: promoCardIn 0.45s ease;
+}
+
+.promo-image {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.promo-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    90deg,
+    rgba(7, 11, 20, 0.97) 0%,
+    rgba(7, 11, 20, 0.91) 42%,
+    rgba(7, 11, 20, 0.55) 72%,
+    rgba(7, 11, 20, 0.2) 100%
+  );
+}
+
+.promo-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 570px;
+  padding-bottom: 22px;
+}
+
+.promo-eyebrow {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: var(--primary);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.promo-title {
+  margin: 0 0 14px;
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: clamp(32px, 3.5vw, 46px);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -1.2px;
+}
+
+.promo-title span {
+  display: block;
+  color: var(--primary);
+}
+
+.promo-slide-community .promo-title span {
+  color: #8a2eff;
+}
+
+.promo-slide-ads .promo-title span {
+  color: #ff2d75;
+}
+
+.promo-description {
+  max-width: 520px;
+  margin: 0 0 16px;
+  color: var(--text-dim);
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+.promo-features {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin: 0 0 17px;
+  padding: 0;
+  list-style: none;
+}
+
+.promo-features li {
+  position: relative;
+  padding-left: 21px;
+  color: var(--text);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.promo-features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--success);
+  font-weight: 800;
+}
+
+.promo-pricing {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-bottom: 16px;
+}
+
+.promo-old-price {
+  color: var(--text-faint);
+  font-size: 16px;
+  text-decoration: line-through;
+}
+
+.promo-price {
+  color: var(--success);
+  font-family: var(--font-display);
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.promo-price-note {
+  color: var(--text-dim);
+  font-size: 11px;
+}
+
+.promo-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 43px;
+  padding: 0 19px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 7px 22px rgba(0, 194, 255, 0.16);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.promo-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0, 194, 255, 0.28);
+}
+
+/* Side navigation arrows */
+.promo-arrow {
+  position: absolute;
+  z-index: 4;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 1px solid rgba(245, 247, 250, 0.28);
+  border-radius: 50%;
+  background: rgba(7, 11, 20, 0.65);
+  color: #fff;
+  cursor: pointer;
+  transform: translateY(-50%);
+  backdrop-filter: blur(8px);
+  transition: background 0.25s ease, border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.promo-arrow-left {
+  left: 14px;
+}
+
+.promo-arrow-right {
+  right: 14px;
+}
+
+.promo-arrow:hover {
+  border-color: var(--primary);
+  background: rgba(0, 194, 255, 0.2);
+}
+
+.promo-arrow-left:hover {
+  transform: translate(-3px, -50%);
+}
+
+.promo-arrow-right:hover {
+  transform: translate(3px, -50%);
+}
+
+/* Small animated hint on the arrows */
+.promo-arrow-left svg {
+  animation: promoHintLeft 1.8s ease-in-out infinite;
+}
+
+.promo-arrow-right svg {
+  animation: promoHintRight 1.8s ease-in-out infinite;
+}
+
+.promo-dots {
+  position: absolute;
+  z-index: 4;
+  right: 50%;
+  bottom: 17px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transform: translateX(50%);
+}
+
+.promo-dot {
+  width: 7px;
+  height: 7px;
+  padding: 0;
+  border: 0;
+  border-radius: 20px;
+  background: rgba(245, 247, 250, 0.42);
+  cursor: pointer;
+  transition: width 0.25s ease, background 0.25s ease;
+}
+
+.promo-dot.active {
+  width: 22px;
+  background: var(--primary);
+}
+
+@keyframes promoCardIn {
+  from {
+    opacity: 0.75;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes promoHintLeft {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(-3px); }
+}
+
+@keyframes promoHintRight {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(3px); }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .promo-carousel {
+    padding: 22px 20px 28px;
+  }
+
+  .promo-card {
+    min-height: 370px;
+    padding: 38px 62px;
+  }
+
+  .promo-content {
+    max-width: 500px;
+  }
+
+  .promo-overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(7, 11, 20, 0.97) 0%,
+      rgba(7, 11, 20, 0.9) 55%,
+      rgba(7, 11, 20, 0.5) 100%
+    );
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .promo-carousel {
+    padding: 18px 14px 24px;
+  }
+
+  .promo-card {
+  display: flex;
+  align-items: center;
+  min-height: 540px;
+  padding: 35px 35px 55px;
+  border-radius: 17px;
+  border-color: rgba(167, 176, 192, 0.24);
+  background: var(--bg-alt);
+}
+
+  /*
+    On mobile, show the complete generated image above the text.
+    The 16 / 9 ratio keeps the full wide image visible without cropping.
+  */
+
+
+.promo-image {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  aspect-ratio: auto;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+/* Blurred background fills the remaining space */
+
+  .promo-overlay {
+  display: block;
+  background: linear-gradient(
+    90deg,
+    rgba(7, 11, 20, 0.97) 0%,
+    rgba(7, 11, 20, 0.88) 65%,
+    rgba(7, 11, 20, 0.65) 100%
+  );
+}
+
+.promo-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+}
+  .promo-eyebrow {
+    margin-bottom: 10px;
+    font-size: 9px;
+    letter-spacing: 1.4px;
+  }
+
+  .promo-title {
+    margin-bottom: 11px;
+    font-size: clamp(26px, 7.4vw, 34px);
+    line-height: 1.12;
+    letter-spacing: -0.8px;
+  }
+
+  .promo-description {
+    margin-bottom: 13px;
+    font-size: 12px;
+    line-height: 1.65;
+  }
+
+  .promo-features {
+    gap: 6px;
+    margin-bottom: 13px;
+  }
+
+  .promo-features li {
+    font-size: 11px;
+  }
+
+  .promo-pricing {
+    gap: 8px;
+    margin-bottom: 13px;
+  }
+
+  .promo-old-price {
+    font-size: 14px;
+  }
+
+  .promo-price {
+    font-size: 24px;
+  }
+
+  .promo-price-note {
+    font-size: 10px;
+  }
+
+  .promo-button {
+    min-height: 40px;
+    padding: 0 15px;
+    font-size: 12px;
+  }
+
+  .promo-arrow {
+    top: 22%;
+    width: 34px;
+    height: 34px;
+    background: rgba(7, 11, 20, 0.78);
+  }
+
+  .promo-arrow-left {
+    left: 9px;
+  }
+
+  .promo-arrow-right {
+    right: 9px;
+  }
+
+  .promo-dots {
+    bottom: 17px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 380px) {
+  .promo-carousel {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .promo-card {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  .promo-image {
+    margin-right: -14px;
+    margin-left: -14px;
+    width: calc(100% + 28px);
+  }
+
+  .promo-title {
+    font-size: 26px;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .promo-card,
+  .promo-arrow svg,
+  .promo-button,
+  .promo-arrow,
+  .promo-dot {
+    animation: none;
+    transition: none;
+  }
+
+}
+/* Hide navigation arrows on all screen sizes */
+.promo-card .promo-arrow {
+  display: none !important;
+}

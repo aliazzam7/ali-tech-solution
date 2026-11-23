@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import heroImg from "../../assets/images/herormv.png";
+// import heroImg from "../../assets/images/herormv.png";
+// import heroImg from "../../assets/images/herormv1.png";
+import heroImg from "../../assets/images/herormv2.png";
 import {
   ArrowUpRight,
   Zap,
@@ -24,6 +26,7 @@ import projects from "../../data/projects";
 import testimonials from "../../data/testimonials";
 import siteConfig from "../../data/siteConfig";
 import { useCountUp } from "../../hooks/useScrolled";
+import PromoCarousel from "../../components/PromoCarousel/PromoCarousel";
 import "./Home.css";
 
 const reasons = [
@@ -45,9 +48,10 @@ const stats = [
 ];
 
 export default function Home() {
-  return (
-    <>
-      <Hero />
+return (
+  <>
+    <PromoCarousel />
+    <Hero />
       <Services />
       <WhyChooseUs />
       <FeaturedProjects />
@@ -82,14 +86,23 @@ function Hero() {
             {siteConfig.heroDescription}
           </motion.p>
 
+          <motion.p
+            className="hero-extra"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.12 }}
+          >
+            {siteConfig.heroExtra}
+          </motion.p>
+
           <motion.div
             className="hero-actions"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.16 }}
           >
-            <Link to="/contact" className="btn btn-primary">Start Your Project <ArrowUpRight size={17} /></Link>
-            <Link to="/portfolio" className="btn btn-ghost">View Portfolio</Link>
+            {/* <Link to="/contact" className="btn btn-primary">Start Your Project <ArrowUpRight size={17} /></Link>
+            <Link to="/portfolio" className="btn btn-ghost">View Portfolio</Link> */}
           </motion.div>
         </div>
 
@@ -114,8 +127,12 @@ function Services() {
   return (
     <section className="section services-section sec-b">
       <div className="container">
-        <SectionHeading eyebrow="What We Build" title="Four disciplines. One team." description="Every engagement draws on the same core stack — AI, web, mobile, and security — so nothing gets handed off between disconnected vendors." />
-        <div className="grid-cols g-4">
+ <SectionHeading
+  eyebrow="What We Build"
+  title="Everything you need. One team."
+  description="AI, web, mobile, security, ads & boosting, account recovery, and final year projects — all under one roof."
+/>
+<div className="grid-cols g-3">
           {serviceCategories.map((service) => (
             <ServiceCard key={service.id} service={service} />
           ))}

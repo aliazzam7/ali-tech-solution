@@ -11,7 +11,7 @@ export const serviceCategories = [
       "Startups automating repetitive work, businesses wanting a branded AI assistant, and teams that need document or image data extracted at scale.",
     technologies: ["Python", "TensorFlow", "PyTorch", "OpenAI API", "LangChain", "FastAPI"],
     workflow: ["Discovery & data audit", "Model / architecture design", "Prototype & test", "Integration", "Monitoring & tuning"],
-    items: ["AI Chatbots", "Automation Systems", "Machine Learning", "OCR", "Computer Vision"],
+    items: ["AI Chatbots", "Automation Systems", "Machine Learning", "OCR & Vision"],
   },
   {
     id: "web",
@@ -25,7 +25,7 @@ export const serviceCategories = [
       "Businesses needing an online presence that converts, and teams that need a dashboard or CMS to manage their own content.",
     technologies: ["React", "Next.js", "Node.js", "MongoDB", "MySQL", "Tailwind CSS"],
     workflow: ["Requirements & sitemap", "UI/UX design", "Development", "QA & performance pass", "Launch & handover"],
-    items: ["Landing Pages", "Company Websites", "Dashboards", "CMS Systems", "E-commerce Platforms"],
+    items: ["Landing Pages", "Company Websites", "Dashboards", "E-commerce"],
   },
   {
     id: "mobile",
@@ -52,7 +52,49 @@ export const serviceCategories = [
       "Businesses handling sensitive data, teams shipping an API or web app that needs a security review before launch, and organizations wanting a security baseline.",
     technologies: ["Burp Suite", "Nmap", "Metasploit", "OWASP ZAP", "Wireshark"],
     workflow: ["Scoping & rules of engagement", "Reconnaissance", "Testing & exploitation", "Reporting", "Remediation support"],
-    items: ["Penetration Testing", "Vulnerability Assessment", "Web Security", "API Security", "Security Consultation"],
+    items: ["Penetration Testing", "Vulnerability Assessment", "Web & API Security", "Consultation"],
+  },
+    {
+    id: "ads",
+    icon: "Megaphone",
+    title: "Ads & Boosting Management",
+    shortDescription:
+      "Run and optimize paid campaigns and post boosting that bring real customers.",
+    whatIsOffered:
+      "Campaign setup, audience targeting, post boosting, budget optimization, and performance reporting across Meta, Instagram, TikTok, and Google.",
+    whoItsFor:
+      "Businesses and creators who want measurable growth without wasting ad budget.",
+    technologies: ["Meta Ads", "Instagram Ads", "TikTok Ads", "Google Ads", "Analytics"],
+    workflow: ["Goal & audience definition", "Creative & copy", "Campaign launch", "Optimization", "Reporting"],
+    items: ["Ad Campaigns", "Post Boosting", "Audience Targeting", "Performance Reports"],
+  },
+  {
+    id: "recovery",
+    icon: "UserCheck",
+    title: "Account Recovery",
+    shortDescription:
+      "Help with banned, restricted, or locked social media accounts through official appeal channels.",
+    whatIsOffered:
+      "Case review, preparing and submitting appeals through the platforms' official processes, and guidance on preventing future restrictions.",
+    whoItsFor:
+      "Businesses and creators who lost access to Instagram, Facebook, or WhatsApp accounts and need a structured way to appeal.",
+    technologies: ["Instagram", "Facebook", "WhatsApp Business", "Meta Business Support"],
+    workflow: ["Case review", "Appeal preparation", "Submission & follow-up", "Access restored", "Prevention tips"],
+    items: ["Banned Accounts", "Locked Accounts", "Restricted Pages", "Appeal Support"],
+  },
+    {
+    id: "fyp",
+    icon: "GraduationCap",
+    title: "Final Year Projects",
+    shortDescription:
+      "Graduation project support at student-friendly prices — built with you and rehearsed until you present with confidence.",
+    whatIsOffered:
+      "Project planning and development together with you, clear documentation, and three Zoom rehearsal sessions at the end where you present as if you were in front of your committee.",
+    whoItsFor:
+      "University students who want a quality graduation project and the confidence to present it without stress.",
+    technologies: ["Web", "Mobile", "AI", "Cybersecurity"],
+    workflow: ["Idea & scope", "Plan & build together", "Documentation", "3 Zoom rehearsals", "Final presentation"],
+    items: ["Project Development", "Documentation", "3 Zoom Rehearsals", "Presentation Coaching"],
   },
 ];
 
